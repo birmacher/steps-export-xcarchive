@@ -1,67 +1,34 @@
-# My Awesome Step
+# Export Xcarchieve [![Bitrise Build Status](https://app.bitrise.io/app/4a77608299acdd22/status.svg?token=VqeMltyd51uDSQX9mc8JUQ&branch=master)](https://app.bitrise.io/app/4a77608299acdd22) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/bitrise-steplib/steps-export-xcarchive/master/LICENSE)
 
-My Awesome Step is a solid starting code base for
-a new Step.
+This step allows you to export IPA from a generated Xcarchieve after archiving your project. Additionally with changing the settings you can also get a newly resigned IPA.
 
+## Examples
 
-## How to use this Step
+### Export IPA after archiving a project
 
-Can be run directly with the [bitrise CLI](https://github.com/bitrise-io/bitrise),
-just `git clone` this repository, `cd` into it's folder in your Terminal/Command Line
-and call `bitrise run test`.
+* [ ] Todo: add yml
 
-*Check the `bitrise.yml` file for required inputs which have to be
-added to your `.bitrise.secrets.yml` file!*
+### Resigning an IPA
 
-Step by step:
+* [ ] Todo: add yml
 
-1. Open up your Terminal / Command Line
-2. `git clone` the repository
-3. `cd` into the directory of the step (the one you just `git clone`d)
-5. Create a `.bitrise.secrets.yml` file in the same directory of `bitrise.yml` - the `.bitrise.secrets.yml` is a git ignored file, you can store your secrets in
-6. Check the `bitrise.yml` file for any secret you should set in `.bitrise.secrets.yml`
-  * Best practice is to mark these options with something like `# define these in your .bitrise.secrets.yml`, in the `app:envs` section.
-7. Once you have all the required secret parameters in your `.bitrise.secrets.yml` you can just run this step with the [bitrise CLI](https://github.com/bitrise-io/bitrise): `bitrise run test`
+## Inputs
 
-An example `.bitrise.secrets.yml` file:
+* [ ] Todo: Auto generate
 
-```
-envs:
-- A_SECRET_PARAM_ONE: the value for secret one
-- A_SECRET_PARAM_TWO: the value for secret two
-```
+| Parameter | Description | Required | Default |
+| --- | --- | --- | --- |
+| example | just an example | - | eg |
 
-## How to create your own step
+## Outputs
 
-1. Create a new git repository for your step (**don't fork** the *step template*, create a *new* repository)
-2. Copy the [step template](https://github.com/bitrise-steplib/step-template) files into your repository
-3. Fill the `step.sh` with your functionality
-4. Wire out your inputs to `step.yml` (`inputs` section)
-5. Fill out the other parts of the `step.yml` too
-6. Provide test values for the inputs in the `bitrise.yml`
-7. Run your step with `bitrise run test` - if it works, you're ready
+* [ ] Todo: Auto generate
 
-__For Step development guidelines & best practices__ check this documentation: [https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md](https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md).
+| Parameter | Description | Required | Default |
+| --- | --- | --- | --- |
+| example | just an example | - | eg |
 
-**NOTE:**
-
-If you want to use your step in your project's `bitrise.yml`:
-
-1. git push the step into it's repository
-2. reference it in your `bitrise.yml` with the `git::PUBLIC-GIT-CLONE-URL@BRANCH` step reference style:
-
-```
-- git::https://github.com/user/my-step.git@branch:
-   title: My step
-   inputs:
-   - my_input_1: "my value 1"
-   - my_input_2: "my value 2"
-```
-
-You can find more examples of step reference styles
-in the [bitrise CLI repository](https://github.com/bitrise-io/bitrise/blob/master/_examples/tutorials/steps-and-workflows/bitrise.yml#L65).
-
-## How to contribute to this Step
+## Contributing
 
 1. Fork this repository
 2. `git clone` it
@@ -75,8 +42,3 @@ in the [bitrise CLI repository](https://github.com/bitrise-io/bitrise/blob/maste
   * direct git URL format: instead of `- original-step-id:` use `- git::https://github.com/user/step.git@branch:`
   * You can find more example of alternative step referencing at: https://github.com/bitrise-io/bitrise/blob/master/_examples/tutorials/steps-and-workflows/bitrise.yml
 7. Once you're done just commit your changes & create a Pull Request
-
-
-## Share your own Step
-
-You can share your Step or step version with the [bitrise CLI](https://github.com/bitrise-io/bitrise). Just run `bitrise share` and follow the guide it prints.
