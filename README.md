@@ -26,9 +26,13 @@ workflows:
       - deploy-to-bitrise-io@1: {}
 ```
 
-## Inputs
+## Configuration
+
+### Inputs
 
 * [ ] Todo: Auto generate
+
+You can configure the step with the following inputs
 
 | Parameter | Description | Required | Default |
 | --- | --- | --- | --- |
@@ -41,9 +45,11 @@ workflows:
 | custom_export_options_plist_content | Custom export options plist content | - | "" |
 | verbose_log | Enable verbose logging? | - | false |
 
-## Outputs
+### Outputs
 
 * [ ] Todo: Auto generate
+
+Step outputs environment variables that you can use as step inputs in the workflow
 
 | Environment Variable | Description |
 | --- | --- |
