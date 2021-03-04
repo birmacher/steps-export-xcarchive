@@ -6,11 +6,25 @@ This step allows you to export IPA from a generated Xcarchieve after archiving y
 
 ### Export IPA after archiving a project
 
-* [ ] Todo: add yml
-
-### Resigning an IPA
-
-* [ ] Todo: add yml
+```yml
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
+workflows:
+  primary:
+    steps:
+      - activate-ssh-key@4:
+      - git::git@github.com:bitrise-io/addons-ship-metadata-downloader-ios.git@update:
+          inputs:
+            - bitrise_ship_data_source: '$CONFIG_JSON_URL'
+      - certificate-and-profile-installer@1.10: {}
+      - export-xcarchive@2.1:
+          inputs:
+            - export_method: development
+            - archive_path: $BITRISE_XCARCHIVE_PATH
+            - product: app-clip
+      - deploy-to-bitrise-io@1: {}
+```
 
 ## Inputs
 
@@ -18,15 +32,24 @@ This step allows you to export IPA from a generated Xcarchieve after archiving y
 
 | Parameter | Description | Required | Default |
 | --- | --- | --- | --- |
-| example | just an example | - | eg |
+| archive_path | iOS or tvOS archive path | + | $BITRISE_XCARCHIVE_PATH |
+| export_method | Select method for export | + | auto-detect |
+| upload_bitcode | Include bitcode | + | yes |
+| compile_bitcode | Rebuild from bitcode | + | yes |
+| team_id | The Developer Portal team to use for this export | - | "" |
+| product | Select a product to distribute | + | app |
+| custom_export_options_plist_content | Custom export options plist content | - | "" |
+| verbose_log | Enable verbose logging? | - | false |
 
 ## Outputs
 
 * [ ] Todo: Auto generate
 
-| Parameter | Description | Required | Default |
+| Environment Variable | Description |
 | --- | --- | --- | --- |
-| example | just an example | - | eg |
+| $BITRISE_IPA_PATH | The created iOS or tvOS .ipa file's path. |
+| $BITRISE_DSYM_PATH | The created iOS or tvOS .dSYM zip file's path. |
+| $BITRISE_IDEDISTRIBUTION_LOGS_PATH | Path to the xcdistributionlogs zip |
 
 ## Contributing
 
