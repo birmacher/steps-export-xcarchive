@@ -46,7 +46,7 @@ workflows:
 * [ ] Todo: Auto generate
 
 | Environment Variable | Description |
-| --- | --- | --- | --- |
+| --- | --- |
 | $BITRISE_IPA_PATH | The created iOS or tvOS .ipa file's path. |
 | $BITRISE_DSYM_PATH | The created iOS or tvOS .dSYM zip file's path. |
 | $BITRISE_IDEDISTRIBUTION_LOGS_PATH | Path to the xcdistributionlogs zip |
