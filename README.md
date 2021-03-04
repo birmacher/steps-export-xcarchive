@@ -18,7 +18,7 @@ workflows:
           inputs:
             - bitrise_ship_data_source: '$CONFIG_JSON_URL'
       - certificate-and-profile-installer@1.10: {}
-      - export-xcarchive@2.1:
+      - export-xcarchive@3:
           inputs:
             - export_method: development
             - archive_path: $BITRISE_XCARCHIVE_PATH
