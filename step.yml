@@ -1,10 +1,12 @@
-title: Export iOS and tvOS Xcode archive
-summary: Export iOS and tvOS Xcode archive
+title: Export Xcarchive
+summary: >
+  This step allows you to export IPA from a generated Xcarchieve after archiving your project.
+  Additionally with changing the settings you can also get a newly resigned IPA.
 description: |-
   Export iOS and tvOS Xcode archive.
 
   Exports .ipa from iOS and tvOS .xcarchive.
-website: https://github.com/bitrise-steplib/steps-export-xcarchive
+website: https://www.bitrise.io/integrations/steps/export-xcarchive
 source_code_url: https://github.com/bitrise-steplib/steps-export-xcarchive
 support_url: https://github.com/bitrise-steplib/steps-export-xcarchive/issues
 host_os_tags:
